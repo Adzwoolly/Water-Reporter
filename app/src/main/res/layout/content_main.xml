@@ -13,7 +13,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -28,8 +28,9 @@
             <ImageView
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:id="@+id/imageView2"
-                android:src="@drawable/profile_placeholder" />
+                android:id="@+id/img_profilePic"
+                android:src="@drawable/profile_placeholder"
+                android:contentDescription="@string/img_profilePic" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -42,30 +43,69 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Name Surname"
-                    android:id="@+id/textView2" />
+                    android:text="Guest"
+                    android:id="@+id/txt_userName" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Reputation: 215"
-                    android:id="@+id/textView3" />
+                    android:text="Reputation: xxx"
+                    android:id="@+id/txt_userRep" />
 
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/imageButton"
-                    android:layout_gravity="center_horizontal" />
+                    android:id="@+id/btn_gameMap"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/btn_gameMap" />
 
             </LinearLayout>
         </LinearLayout>
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
+            android:layout_height="100dp"
+            android:id="@+id/btn_reportFault"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.13" />
+            android:contentDescription="@string/btn_reportFault" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:layout_marginBottom="50dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="95dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/severn_trent_water" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_moreInfo"
+                    android:id="@+id/btn_moreInfo" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_contactUs"
+                    android:id="@+id/btn_contactUs" />
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

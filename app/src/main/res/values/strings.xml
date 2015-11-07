@@ -1,11 +1,16 @@
 <resources>
-    <string name="app_name">Water-Reporter</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_name">Water Reporter</string>
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">Sign in</string>
+
+    <!-- String related to main activity -->
+    <string name="btn_gameMap">Map a man hole</string>
+    <string name="btn_reportFault">Report a water fault</string>
+    <string name="img_profilePic">Profile image</string>
+    <string name="btn_moreInfo">More information</string>
+    <string name="btn_contactUs">Contact Us</string>
+
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -19,4 +24,5 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
 </resources>
