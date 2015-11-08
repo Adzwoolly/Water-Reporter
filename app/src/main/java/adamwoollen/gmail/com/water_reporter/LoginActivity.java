@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
+    TextView xpass = (TextView) findViewById(R.id.txt_incorrectLogin);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +21,6 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view){
         EditText username = (EditText) findViewById(R.id.editTxt_username);
         EditText password = (EditText) findViewById(R.id.editTxt_password);
-        TextView xpass = (TextView) findViewById(R.id.txt_incorrectLogin);
         if(username.getText().toString().equals("Adzwoolly") && password.getText().toString().equals("Password123!")){
             xpass.setVisibility(View.GONE);
             Intent intent = new Intent();
