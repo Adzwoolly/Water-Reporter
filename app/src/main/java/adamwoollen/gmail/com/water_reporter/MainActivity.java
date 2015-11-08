@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    Boolean loggedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
             //set full name
             //set profile picture
             //set reputation
+        loggedIn = true;
+
+        //call log in page
+
+        if(loggedIn){
+            TextView txt_userName = (TextView) findViewById(R.id.txt_userName);
+            txt_userName.setText("It's working!");
+        }
     }
 
     @Override
