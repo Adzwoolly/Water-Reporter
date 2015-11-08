@@ -1,13 +1,18 @@
 package adamwoollen.gmail.com.water_reporter;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 TextView name = (TextView) findViewById(R.id.txt_userName);
                 TextView rep = (TextView) findViewById(R.id.txt_userRep);
+                ImageView proPic = (ImageView) findViewById(R.id.img_profilePic);
                 name.setText(data.getStringExtra("name"));
                 rep.setText("Level " + data.getStringExtra("rep"));
+                proPic.setImageResource(R.drawable.profile_pic_adam);
             } else{
                 //nothing here, leave as is
             }
@@ -76,8 +83,25 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void launchReportProblem(View view) {
+    //////////////////////////////////////////////////////////////////
+
+    public void launchReportProblem(View view){
         Intent intent = new Intent(this, ReportProblemMain.class);
         startActivity(intent);
+    }
+
+    public void launchMap(View view){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+    public void moreInfo(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.stwater.co.uk/aboutus"));
+        startActivity(browserIntent);
+    }
+
+    public void contactUs(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.stwater.co.uk/mt/severntrentwater.custhelp.com/?un_jtt_v_help=yes"));
+        startActivity(browserIntent);
     }
 }

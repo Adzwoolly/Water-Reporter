@@ -50,15 +50,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Reputation: xxx"
+                    android:text="Reputation: n/a"
                     android:id="@+id/txt_userRep" />
 
                 <ImageButton
-                    android:layout_width="match_parent"
+                    android:layout_width="140dp"
                     android:layout_height="match_parent"
                     android:id="@+id/btn_gameMap"
-                    android:layout_gravity="center_horizontal"
-                    android:contentDescription="@string/btn_gameMap" />
+                    android:layout_gravity="center_horizontal|right"
+                    android:contentDescription="@string/btn_gameMap"
+                    android:nestedScrollingEnabled="false"
+                    android:onClick="launchMap"
+                    android:src="@drawable/mapmanhole"
+                    android:scaleType="fitCenter" />
 
             </LinearLayout>
         </LinearLayout>
@@ -70,7 +74,8 @@
             android:contentDescription="@string/btn_reportFault"
             android:onClick="launchReportProblem"
             android:src="@drawable/report"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            android:layout_marginTop="20dp" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -95,13 +100,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_moreInfo"
-                    android:id="@+id/btn_moreInfo" />
+                    android:id="@+id/btn_moreInfo"
+                    android:onClick="moreInfo" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_contactUs"
-                    android:id="@+id/btn_contactUs" />
+                    android:id="@+id/btn_contactUs"
+                    android:onClick="contactUs" />
 
             </LinearLayout>
         </LinearLayout>

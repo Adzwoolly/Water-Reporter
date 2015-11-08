@@ -81,7 +81,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_weight="1"
                 android:layout_marginTop="10dp"
-                android:onClick="skip" />
+                android:onClick="skipLogin" />
 
             <Space
                 android:layout_width="wrap_content"

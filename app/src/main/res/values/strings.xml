@@ -14,5 +14,6 @@
 
     <!-- Strings related to ReportProblemMain -->
     <string name="RPM_label">Report a Problem</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

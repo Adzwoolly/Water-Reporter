@@ -30,7 +30,8 @@
             android:scaleType="fitCenter"
             android:cropToPadding="false"
             android:focusable="false"
-            android:contentDescription="Water Leak" />
+            android:contentDescription="Water Leak"
+            android:onClick="reportHub" />
 
         <ImageButton
             android:layout_width="170dp"
@@ -45,7 +46,8 @@
             android:src="@drawable/general_supply"
             android:scaleType="fitCenter"
             android:clickable="true"
-            android:contentDescription="General Supply" />
+            android:contentDescription="General Supply"
+            android:onClick="reportHub" />
 
         <ImageButton
             android:layout_width="170dp"
@@ -57,7 +59,8 @@
             android:src="@drawable/drain_issue"
             android:scaleType="fitCenter"
             android:clickable="true"
-            android:contentDescription="Drain Issue" />
+            android:contentDescription="Drain Issue"
+            android:onClick="reportHub" />
 
         <ImageButton
             android:layout_width="170dp"
@@ -70,7 +73,8 @@
             android:scaleType="fitCenter"
             android:clickable="true"
             android:baselineAlignBottom="false"
-            android:contentDescription="Other" />
+            android:contentDescription="Other"
+            android:onClick="reportHub" />
 
     </GridLayout>
 

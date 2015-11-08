@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextView xpass = (TextView) findViewById(R.id.txt_incorrectLogin);
+    TextView xpass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view){
         EditText username = (EditText) findViewById(R.id.editTxt_username);
         EditText password = (EditText) findViewById(R.id.editTxt_password);
+        xpass = (TextView) findViewById(R.id.txt_incorrectLogin);
         if(username.getText().toString().equals("Adzwoolly") && password.getText().toString().equals("Password123!")){
             xpass.setVisibility(View.GONE);
             Intent intent = new Intent();
@@ -33,7 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public void skip(View view){
+    public void skipLogin(View view){
+        xpass = (TextView) findViewById(R.id.txt_incorrectLogin);
         xpass.setVisibility(View.GONE);
         Intent intent = new Intent();
         setResult(RESULT_CANCELED, intent);
