@@ -65,15 +65,12 @@
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:id="@+id/btn_reportFault"
-            android:layout_gravity="center_horizontal"
             android:contentDescription="@string/btn_reportFault"
-            android:onClick="lauchReportProblem" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:onClick="launchReportProblem"
+            android:src="@drawable/report"
+            android:scaleType="fitCenter" />
 
         <LinearLayout
             android:orientation="horizontal"
