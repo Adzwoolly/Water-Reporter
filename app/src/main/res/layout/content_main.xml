@@ -68,7 +68,8 @@
             android:layout_height="100dp"
             android:id="@+id/btn_reportFault"
             android:layout_gravity="center_horizontal"
-            android:contentDescription="@string/btn_reportFault" />
+            android:contentDescription="@string/btn_reportFault"
+            android:onClick="lauchReportProblem" />
 
         <Space
             android:layout_width="match_parent"
