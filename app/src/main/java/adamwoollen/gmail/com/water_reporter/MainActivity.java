@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Boolean loggedIn;
+    Boolean loggedIn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +25,27 @@ public class MainActivity extends AppCompatActivity {
         //set full name
         //set profile picture
         //set reputation
-        loggedIn = true;
-
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
 
         if(loggedIn){
             TextView txt_userName = (TextView) findViewById(R.id.txt_userName);
             txt_userName.setText("It's working!");
+        } else{
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivityForResult(intent, 1);
+        }
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK) {
+                TextView name = (TextView) findViewById(R.id.txt_userName);
+                TextView rep = (TextView) findViewById(R.id.txt_userRep);
+                name.setText(data.getStringExtra("name"));
+                rep.setText("Level " + data.getStringExtra("rep"));
+            } else{
+                //nothing here, leave as is
+            }
         }
     }
 
