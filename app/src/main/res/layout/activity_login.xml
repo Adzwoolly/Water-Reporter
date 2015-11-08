@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="adamwoollen.gmail.com.water_reporter.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:id="@+id/img_loginBanner"
+        android:src="@drawable/stw_dam"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/img_loginBanner"
+        android:layout_alignLeft="@+id/img_loginBanner"
+        android:layout_alignStart="@+id/img_loginBanner">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTxt_username"
+            android:editable="true"
+            android:hint="Username"
+            android:inputType="textNoSuggestions|textPersonName"
+            android:enabled="true"
+            android:layout_above="@+id/editTxt_password"
+            android:layout_alignLeft="@+id/editTxt_password"
+            android:layout_alignStart="@+id/editTxt_password"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:hint="Password"
+            android:id="@+id/editTxt_password"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/img_loginBanner"
+            android:layout_alignStart="@+id/img_loginBanner"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="0dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip"
+                android:id="@+id/button2"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="left"
+                android:layout_weight="1" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log in"
+                android:id="@+id/button3"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
