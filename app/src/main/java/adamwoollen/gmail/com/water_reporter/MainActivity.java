@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         //set reputation
         loggedIn = true;
 
-        //call log in page
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
 
         if(loggedIn){
             TextView txt_userName = (TextView) findViewById(R.id.txt_userName);
